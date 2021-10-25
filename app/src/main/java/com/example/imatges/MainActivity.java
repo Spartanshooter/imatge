@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final ImageView imageView = findViewById(R.id.imageView);
+        Uri fileUri = Uri.fromFile(getfile());
+        imageView.setImageURI(fileUri);
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(v -> {
             dispatchTakePictureIntent();
